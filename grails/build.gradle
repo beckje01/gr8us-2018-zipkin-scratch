@@ -22,6 +22,11 @@ apply plugin: "asset-pipeline"
 
 repositories {
 	maven { url "https://repo.grails.org/grails/core" }
+	maven {
+		url 'https://repo.spring.io/libs-milestone'
+	}
+	maven { url "https://oss.jfrog.org/oss-snapshot-local/"}
+
 }
 
 dependencies {
@@ -30,9 +35,15 @@ dependencies {
 	compile "org.grails:grails-core"
 	compile "org.springframework.boot:spring-boot-starter-actuator"
 	compile "org.springframework.boot:spring-boot-starter-tomcat"
+//	compile "io.zipkin.brave:brave-bom:4.18.0"
+//	compile "org.springframework.cloud:spring-cloud-sleuth-core:2.0.0.M8"
+//	compile "org.springframework.cloud:spring-cloud-sleuth-zipkin:2.0.0.M8"
+//	compile 'org.springframework.cloud:spring-cloud-starter-sleuth'
+	compile "org.springframework.cloud:spring-cloud-sleuth-core:1.0.3.RELEASE"
+	compile "org.springframework.cloud:spring-cloud-sleuth-zipkin:1.0.3.RELEASE"
 	compile "org.grails:grails-dependencies"
 	compile "org.grails:grails-web-boot"
-	compile "org.grails.plugins:cache"
+//	compile "org.grails.plugins:cache"
 	compile "org.grails.plugins:scaffolding"
 	compile "org.grails.plugins:hibernate5"
 	compile "org.hibernate:hibernate-core:5.1.3.Final"

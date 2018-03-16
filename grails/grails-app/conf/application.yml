@@ -20,17 +20,32 @@ info:
         version: '@info.app.version@'
         grailsVersion: '@info.app.grailsVersion@'
 spring:
+    sleuth:
+        sampler:
+          percentage: 1.0
+    zipkin:
+        enabled: true
+        baseUrl: http://192.168.10.1:9411/
     main:
         banner-mode: "off"
     groovy:
         template:
             check-template-location: false
 
+sample:
+  zipkin:
+    # When enabled=false, traces log to the console. Comment to send to zipkin
+    enabled: true
+    baseUrl: http://192.168.10.1:9411/
+
+
 # Spring Actuator Endpoints are Disabled by Default
 endpoints:
     enabled: false
     jmx:
         enabled: true
+
+
 
 ---
 grails:
