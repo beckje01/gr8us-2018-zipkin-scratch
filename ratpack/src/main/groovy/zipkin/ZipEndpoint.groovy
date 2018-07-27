@@ -31,6 +31,12 @@ class ZipEndpoint implements Action<Chain> {
 					return response.body.text
 				}
 			}
+
+			get("other") {
+				render httpClient.get(new URI("http://127.0.0.1:8081/other")).map { ReceivedResponse response ->
+					return response.body.text
+				}
+			}
 		}
 	}
 }
