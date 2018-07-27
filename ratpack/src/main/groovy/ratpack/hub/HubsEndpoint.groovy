@@ -9,6 +9,9 @@ import io.netty.handler.codec.http.HttpHeaderValues
 import ratpack.func.Action
 import ratpack.groovy.Groovy
 import ratpack.handling.Chain
+import ratpack.http.client.HttpClient
+import ratpack.http.client.ReceivedResponse
+import ratpack.zipkin.Zipkin
 
 @Slf4j
 @CompileStatic
@@ -16,10 +19,12 @@ import ratpack.handling.Chain
 class HubsEndpoint implements Action<Chain> {
 
 	private final HubDAOService hubDAOService
+	private final HttpClient httpClient
 
 	@Inject
-	HubsEndpoint(HubDAOService hubDAOService) {
+	HubsEndpoint(HubDAOService hubDAOService, @Zipkin HttpClient httpClient) {
 		this.hubDAOService = hubDAOService
+		this.httpClient = httpClient
 	}
 
 	@Override
@@ -52,8 +57,6 @@ class HubsEndpoint implements Action<Chain> {
 					}
 				}
 			}
-
-
 
 
 			get("stats") { ObjectMapper objectMapper ->

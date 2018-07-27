@@ -24,8 +24,7 @@ spring:
         sampler:
           percentage: 1.0
     zipkin:
-        enabled: true
-        baseUrl: http://192.168.10.1:9411/
+        baseUrl: http://192.168.11.2:9411/
     main:
         banner-mode: "off"
     groovy:
@@ -36,7 +35,6 @@ sample:
   zipkin:
     # When enabled=false, traces log to the console. Comment to send to zipkin
     enabled: true
-    baseUrl: http://192.168.10.1:9411/
 
 
 # Spring Actuator Endpoints are Disabled by Default

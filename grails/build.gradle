@@ -35,10 +35,6 @@ dependencies {
 	compile "org.grails:grails-core"
 	compile "org.springframework.boot:spring-boot-starter-actuator"
 	compile "org.springframework.boot:spring-boot-starter-tomcat"
-//	compile "io.zipkin.brave:brave-bom:4.18.0"
-//	compile "org.springframework.cloud:spring-cloud-sleuth-core:2.0.0.M8"
-//	compile "org.springframework.cloud:spring-cloud-sleuth-zipkin:2.0.0.M8"
-//	compile 'org.springframework.cloud:spring-cloud-starter-sleuth'
 	compile "org.springframework.cloud:spring-cloud-sleuth-core:1.3.2.RELEASE"
 	compile "org.springframework.cloud:spring-cloud-sleuth-zipkin:1.3.2.RELEASE"
 	compile "org.grails:grails-dependencies"
