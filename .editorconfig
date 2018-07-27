@@ -8,5 +8,16 @@ charset = utf-8
 trim_trailing_whitespace = true
 insert_final_newline = true
 
+# You should be able to create an .editorconfig with a personalized tab indention size in a parent directory.
+# indent_size = 4
+
+[*.py]
+indent_style = space
+
 [*.md]
+indent_style = space
 trim_trailing_whitespace = false
+
+[*.yml]
+indent_style = space
+indent_size = 2

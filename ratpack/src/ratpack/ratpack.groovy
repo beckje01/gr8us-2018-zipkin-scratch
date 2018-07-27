@@ -26,7 +26,7 @@ ratpack {
 		moduleConfig(ServerTracingModule,  serverConfig.get('/zipkin', ServerTracingModule.Config)
 				.serviceName("ratpack")
 				.sampler(Sampler.ALWAYS_SAMPLE)
-				.spanReporterV2(AsyncReporter.create(OkHttpSender.create("http://192.168.11.2:9411/api/v2/spans")))
+				.spanReporterV2(AsyncReporter.create(OkHttpSender.create("http://localhost:9411/api/v2/spans")))
 
 		)
 

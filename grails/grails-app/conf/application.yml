@@ -24,7 +24,7 @@ spring:
         sampler:
           percentage: 1.0
     zipkin:
-        baseUrl: http://192.168.11.2:9411/
+        baseUrl: http://localhost:9411/
     main:
         banner-mode: "off"
     groovy:
