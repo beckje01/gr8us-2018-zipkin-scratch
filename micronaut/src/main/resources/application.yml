@@ -11,6 +11,7 @@ micronaut:
 tracing:
   zipkin:
     enabled: true
+    traceId128Bit: true
     http:
       url: http://localhost:9411
       sampler:
